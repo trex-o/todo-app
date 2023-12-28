@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - dockerAppData:/data/db
+
+  myFlaskApp:
+    image: flask-app:1.0.0
+    ports:
+      - 5000:5000
+
+volumes:
+  dockerAppData:
+    driver: local
