@@ -10,7 +10,7 @@ services:
       - dockerAppData:/data/db
 
   myFlaskApp:
-    image: flask-app:1.0.0
+    image: flask-app-jenkins:1.0.0
     ports:
       - 5000:5000
 
